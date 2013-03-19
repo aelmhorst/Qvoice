@@ -1,0 +1,33 @@
+[info]
+title=Barcode
+codepage=65001
+version=3.00
+format=2.00
+readonly=true
+refcount=5
+
+[titles]
+1031=Barcode
+1036=Code-barre
+1040=Codice a barre
+3082=Código de barras
+1043=Streepjescode
+1046=Código de barras
+1053=Streckkod
+1044=Strekkode
+1030=Stregkode
+1035=Viivakoodi
+1041=バーコード
+1042=바코드
+1028=條碼
+2052=条状
+1029=Čárový kód
+1045=Kod paskowy
+1032=Γραμμικός κώδικας
+1038=Vonalkód
+1049=Штрих-код
+1055=Bar Kod
+2070=Código
+1037=ברקוד
+1054=รหัสแท่ง, บาร์โค้ด
+1025=رمز شريطي

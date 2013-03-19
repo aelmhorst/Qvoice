@@ -1,0 +1,290 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Pricelists</title>
+<link rel="File-List" href="pricelists_files/filelist.xml">
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+<meta name="Microsoft Theme" content="bars 111, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body background="_themes/bars/barbkgde.gif" bgcolor="#FFFFCC" text="#003333" link="#006666" vlink="#666633" alink="#999966"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="Times New Roman, Times">
+
+<p align="left"><strong><font size="6"><a name="top">
+<img src="_derived/pricelists.htm_cmp_bars110_bnr.gif" width="600" height="60" border="0" alt="Pricelists"></a></font></strong><br>
+<a href="Index.htm"><img src="_derived/home_cmp_barcode000_hbtn.gif" width="140" height="30" border="0" alt="Contents" align="middle"></a> <a href="InnerIndex.htm"><img src="_derived/InnerIndex.htm_cmp_barcode000_hbtn.gif" width="140" height="30" border="0" alt="Article Index" align="middle"></a> <a href="release_notes.htm"><img src="_derived/release_notes.htm_cmp_barcode000_hbtn.gif" width="140" height="30" border="0" alt="Current Release" align="middle"></a> <a href="Common%20Tasks.htm"><img src="_derived/Common%20Tasks.htm_cmp_barcode000_hbtn.gif" width="140" height="30" border="0" alt="Common Tasks" align="middle"></a><br>
+<nobr><A HREF="Common%20Tasks.htm" TARGET="" STYLE="{text-decoration: none;}">Up</A></nobr>
+<a href="javascript:self.close()">Close Help</a></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="Times New Roman, Times">
+
+<h2><!--mstheme--><font color="#006666">Pricing Documentation<!--mstheme--></font></h2>
+<!--mstheme--></font><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100.0%">
+  <tr>
+    <td width="17" valign="top" style="width: 12.8pt; padding: 0in"><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" alt="" style='width:11.25pt;
+ height:11.25pt;mso-wrap-distance-left:9.75pt;mso-wrap-distance-right:9.75pt'>
+ <v:imagedata src="pricelists_files/image001.gif" o:href="file:///C:\Documents%20and%20Settings\Andy\My%20Documents\Consulting\Quality%20Kitchens\QK%20Order\Help\_themes\modular\modbul1.gif"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=15 height=15
+src="pricelists_files/image001.gif" v:shapes="_x0000_s1025"><![endif]><!--mstheme--></font></td>
+    <td width="965" valign="top" style="width: 723.65pt; padding: 0in"><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal"><span style="color: windowtext">Database Tables 
+    associated with pricing:</span></p>
+    <p class="MsoNormal"><span style="font-family: Trebuchet MS">This document 
+    can be used as a starting point for understanding how the database tables in 
+    Qvoice are used to determine prices. These are the tables associated with 
+    the complete set of pricing rules inside Qvoice.</span></p>
+    <p class="MsoNormal"><span style="font-family: Trebuchet MS">&nbsp;</span></p>
+    <h3><!--mstheme--><font color="#006666">SlabType<!--mstheme--></font></h3>
+    <p class="MsoNormal">The slab type table groups slabs together that are 
+    priced using the same minimum length restrictions. Each price list can place 
+    a slab into different length restrictions. For example, STCs have one set of 
+    minimum length rules for wholesale pricing and another set of rules for 
+    Wausau Homes pricing.. These types differ only by their length restrictions. 
+    Different types of slabs have different allowable and mimimum length rules. 
+    Note that slab types are specific to price lists. In other words, an STC 
+    could be a slab type of&nbsp; “Normal Customer Slab” in one price List and WHSlab 
+    in a different price list. </p>
+    <!--mstheme--></font><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Column Name<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: 1.0pt solid #669999; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Description<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        vchSlabTypeDescription<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        A Description of this type of slab, useful for maintaining the database<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        iSlabTypeID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        The slab type for this slab and price list.<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        vchAvailableLengths<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        A comma-seperated lists of allowable lengths<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        flMinimumLength<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        The minimum length allowed for this type<!--mstheme--></font></td>
+      </tr>
+    </table><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal">The mapping of slabs to slab types is done in the 
+    SlabPrice table, which is documented below.</p>
+    <h3><!--mstheme--><font color="#006666">SlabPrice<!--mstheme--></font></h3>
+    <p>The SlabPrice table holds a dual role in defining pricing for slabs. 
+    First of all, it contains per-foot pricing for all of the slabs. Secondly, 
+    it links a slab to a specific slab type, which is specific to a price list. 
+    This is how different customers can have different rules for minimum 
+    footages.</p>
+    <!--mstheme--></font><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Column Name<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: 1.0pt solid #669999; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Description<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        IPriceListID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        A link to the price list for this row<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        ISlabID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        A link to the slab in the Slab table<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        flPrice<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        The per-foot price for this slab and price list<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        ISlabTypeID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        The slab type for this slab and price list.<!--mstheme--></font></td>
+      </tr>
+    </table><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal"><span style="color: black">&nbsp;</span></p>
+    <h3><!--mstheme--><font color="#006666">ChargePrice<!--mstheme--></font></h3>
+    <p class="MsoNormal">The ChargePrice table determines the price for each 
+    charge, based on the current price list.</p>
+    <!--mstheme--></font><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Column Name<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: 1.0pt solid #669999; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Description<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">IPriceListID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A link to the price list for this row<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">IchargeID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A link to the Charge table for this row<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">FlPrice<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">The amount charge for this charge<!--mstheme--></font></td>
+      </tr>
+    </table><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal"><span style="color: black">&nbsp;</span></p>
+    <h3><!--mstheme--><font color="#006666">LaminatePrice<!--mstheme--></font></h3>
+    <p class="MsoNormal">The laminate price table determines the upcharge for 
+    laminates for each price list. Pricing is based upon both laminate type and 
+    slab type. Therefore, this table creates a row for every combination of 
+    laminate type (stock, red, etc) and slab type (STC, BT, etc).</p>
+    <!--mstheme--></font><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Column Name<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: 1.0pt solid #669999; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Description<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">iPriceListID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A link to the price list for this row<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">iPriceCodeID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A link to the LaminateUpcharge table<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">islabType<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">The type of slab that is being priced<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">mSlabUpCharge<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">The upcharge for this type of slab and this 
+        laminate type<!--mstheme--></font></td>
+      </tr>
+    </table><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal"><span style="color: black">&nbsp;</span></p>
+    <h3><!--mstheme--><font color="#006666">LaminateBrand<!--mstheme--></font></h3>
+    <p class="MsoNormal">The laminate brand table defines pricing per customer 
+    by brand. If pricing rules mean that specific price lists have top upcharges 
+    per laminate brand, that mapping can be done here. This table was necessary 
+    for Wausau homes top and job upcharges, but may not have any different rules 
+    from the wholesale pricelist in the future.</p>
+    <!--mstheme--></font><table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse">
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Column Name<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: 1.0pt solid #669999; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in; background: #99CCFF"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">Description<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">iPriceListID<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A link to the price list for this row<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">vchBrandCode<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A code identifying this brand<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">vchBrandDesc<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">A description of this brand<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">flJobUpcharge<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">The upcharge for an entire job of this color<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="221" valign="top" style="width: 165.65pt; border-left: 1.0pt solid #669999; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">flTopUpcharge<!--mstheme--></font></td>
+        <td width="372" valign="top" style="width: 279.0pt; border-left: medium none; border-right: 1.0pt solid #669999; border-top: medium none; border-bottom: 1.0pt solid #669999; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0in; padding-bottom: 0in"><!--mstheme--><font face="Times New Roman, Times">
+        <p class="MsoNormal">The upcharge for a single top in this color<!--mstheme--></font></td>
+      </tr>
+    </table><!--mstheme--><font face="Times New Roman, Times">
+    <p class="MsoNormal"><span style="color: black">&nbsp;</span></p>
+    <p class="MsoNormal">&nbsp;</p>
+    <p class="MsoNormal">&nbsp;</p>
+    <p class="MsoNormal"><span style="font-family: Trebuchet MS">&nbsp;</span></p>
+    <p class="MsoNormal"><span style="font-family: Trebuchet MS">&nbsp;</span></p>
+    <p class="MsoNormal"><span style="font-family: Trebuchet MS">&nbsp;</span></p>
+    <p class="MsoNormal"><span style="font-family: Trebuchet MS">&nbsp;</span></p>
+    <p class="MsoNormal"><span style="color: black">&nbsp;</span><!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="Times New Roman, Times">
+<p class="MsoNormal"><span style="font-family: Trebuchet MS; color: black">&nbsp;</span></p>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="Times New Roman, Times">
+<p align="left">Qvoice Order Entry -- Online Help</p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+
+</html>

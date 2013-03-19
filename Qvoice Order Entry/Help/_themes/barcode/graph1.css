@@ -1,0 +1,84 @@
+.mstheme
+{
+	nav-banner-image: url(bcabnr.gif);
+	separator-image: url(bcarule.gif);
+	list-image-1: url(bcabull1.gif);
+	list-image-2: url(bcabull2.gif);
+	list-image-3: url(bcabull3.gif);
+	navbutton-horiz-pushed: url(bcahns.gif);
+	navbutton-horiz-normal: url(bcahnd.gif);
+	navbutton-horiz-hovered: url(bcahnm.gif);
+	navbutton-vert-pushed: url(bcavns.gif);
+	navbutton-vert-normal: url(bcavnd.gif);
+	navbutton-vert-hovered: url(bcavnm.gif);
+	navbutton-home-normal: url(bcahomd.gif);
+	navbutton-home-hovered: url(bcahomm.gif);
+	navbutton-home-pushed: url(bcahomd.gif);
+	navbutton-up-normal: url(bcaupd.gif);
+	navbutton-up-hovered: url(bcaupm.gif);
+	navbutton-up-pushed: url(bcaupd.gif);
+	navbutton-prev-normal: url(bcapred.gif);
+	navbutton-prev-hovered: url(bcaprem.gif);
+	navbutton-prev-pushed: url(bcapred.gif);
+	navbutton-next-normal: url(bcanexd.gif);
+	navbutton-next-hovered: url(bcanexm.gif);
+	navbutton-next-pushed: url(bcanexd.gif);
+}
+.mstheme-bannertxt
+{
+	font-family: Impact, Arial, Helvetica;
+	font-size: 6;
+	text-align: left;
+	vertical-align: bottom;
+	color: rgb(255,255,204);
+}
+.mstheme-horiz-navtxt
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 2;
+	font-weight: bold;
+	color: rgb(204,204,153);
+}
+.mstheme-vert-navtxt
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 2;
+	font-weight: bold;
+	color: rgb(204,204,153);
+}
+.mstheme-navtxthome
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 1;
+	color: rgb(0,51,51);
+}
+.mstheme-navtxtup
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 1;
+	color: rgb(0,51,51);
+}
+.mstheme-navtxtprev
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 1;
+	color: rgb(0,51,51);
+}
+.mstheme-navtxtnext
+{
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 1;
+	color: rgb(0,51,51);
+}
+UL
+{
+	list-style-image:url(bcabull1.gif);
+}
+UL UL
+{
+	list-style-image:url(bcabull2.gif);
+}
+UL UL UL
+{
+	list-style-image:url(bcabull3.gif);
+}

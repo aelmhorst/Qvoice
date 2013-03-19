@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[DataDoctor.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\VSS,
+SCC_Project_Name ="$/DataDoctor", LCAAAAAA
+
+[DataUpdate.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\VSS,
+SCC_Project_Name ="$/DataUpdater", DGAAAAAA

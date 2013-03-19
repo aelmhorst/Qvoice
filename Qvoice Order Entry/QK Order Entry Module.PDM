@@ -1,0 +1,432 @@
+[Root]
+Most Recent Package=Qvoice Order Entry Install Wizard
+
+
+[Package|Qvoice Setup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\Andy\My Documents\Consulting\QkOrderSetup
+
+[Package|Qvoice Setup|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Qvoice Setup|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Qvoice Setup|Files Found]
+
+[Package|Qvoice Setup|Files Released]
+u2LBAR.DLL=
+u25TOTAL.DLL=
+u25STORE.DLL=
+p2SSYB10.DLL=
+p2SORA7.DLL=
+p2SIFMX.DLL=
+p2BXBSE.DLL=
+p2BBND.DLL=
+p2BBDE.DLL=
+Crystal=
+
+[Package|Qvoice Setup|Missing Dependency Information]
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=
+
+[Package|Qvoice Setup|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Qvoice Setup|Files Added]
+
+[Package|Qvoice Setup|Files Removed]
+c:\windows\help\windows.hlp=
+
+[Package|Qvoice Setup|Files In Project]
+C:\Documents and Settings\Andy\My Documents\Consulting\root\Qvoice Order Entry\qkorder.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\cpeaut32.dll=Yes
+C:\WINDOWS\system32\crpe32.dll=Yes
+C:\WINDOWS\system32\Implode.dll=Yes
+C:\WINDOWS\system32\Crpaig80.dll=Yes
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\Crystal\Crxlat32.dll=Yes
+C:\WINDOWS\system32\p2bdao.dll=Yes
+C:\WINDOWS\system32\p2ctdao.dll=Yes
+C:\WINDOWS\system32\p2irdao.dll=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\p2sodbc.dll=Yes
+C:\WINDOWS\Crystal\p2ssql.dll=Yes
+C:\WINDOWS\Crystal\p2soledb.dll=Yes
+C:\WINDOWS\Crystal\u2ddisk.dll=Yes
+C:\WINDOWS\Crystal\u2dmapi.dll=Yes
+C:\WINDOWS\Crystal\u2dnotes.dll=Yes
+C:\WINDOWS\Crystal\u2dpost.dll=Yes
+C:\WINDOWS\Crystal\u2dvim.dll=Yes
+C:\WINDOWS\Crystal\u2dapp.dll=Yes
+C:\WINDOWS\Crystal\u2fcr.dll=Yes
+C:\WINDOWS\Crystal\u2fhtml.dll=Yes
+C:\WINDOWS\Crystal\u2fodbc.dll=Yes
+C:\WINDOWS\Crystal\u2frec.dll=Yes
+C:\WINDOWS\Crystal\u2frtf.dll=Yes
+C:\WINDOWS\Crystal\u2fsepv.dll=Yes
+C:\WINDOWS\Crystal\u2ftext.dll=Yes
+C:\WINDOWS\Crystal\u2fwks.dll=Yes
+C:\WINDOWS\Crystal\u2fwordw.dll=Yes
+C:\WINDOWS\Crystal\u2fxls.dll=Yes
+C:\WINDOWS\Crystal\u25dts.dll=Yes
+C:\WINDOWS\Crystal\u2l2000.dll=Yes
+C:\WINDOWS\Crystal\u2lcom.dll=Yes
+C:\WINDOWS\Crystal\u2ldts.dll=Yes
+C:\WINDOWS\Crystal\u2lsamp1.dll=Yes
+C:\WINDOWS\Crystal\u252000.dll=Yes
+\program files\seagate software\shared\SSCSDK80.DLL=Yes
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=Yes
+C:\WINDOWS\system32\MSBIND.DLL=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\MSADODC.OCX=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\Help\windows.hlp=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Qvoice Setup|Configure Registry Files]
+Applicable=No
+
+[Package|Qvoice Setup|Configure Remote Servers]
+Applicable=No
+
+[Package|Qvoice Setup|Install Locations]
+C:\Documents and Settings\Andy\My Documents\Consulting\root\Qvoice Order Entry\qkorder.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\cpeaut32.dll=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\Crxlat32.dll=$(WinSysPath)
+C:\WINDOWS\system32\p2bdao.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\p2ctdao.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\p2irdao.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\p2sodbc.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\p2ssql.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\p2soledb.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2ddisk.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dmapi.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dnotes.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dpost.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dvim.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dapp.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fcr.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fhtml.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fodbc.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2frec.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2frtf.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fsepv.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2ftext.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fwks.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fwordw.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fxls.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u25dts.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2l2000.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2lcom.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2ldts.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2lsamp1.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u252000.dll=$(WinSysPath)\Crystal
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Qvoice Setup|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\Andy\My Documents\Consulting\root\Qvoice Order Entry\qkorder.exe=No
+C:\WINDOWS\system32\Implode.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Qvoice Setup|Distribution]
+Type=single
+Size=1.44 MB
+Title=Qvoice Order Entry
+
+[Package|Qvoice Setup|IconGroups]
+Group0=Quality Kitchens
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|Qvoice Setup|Quality Kitchens]
+Icon1=qkorder.exe
+Title1=Qvoice Order Entry
+StartIn1=$(AppPath)
+Key1=Icon3
+
+[Package|Qvoice Setup|Package]
+PackageFolder=C:\Documents and Settings\Andy\My Documents\Consulting\QkOrderSetup
+ProjectFolder=C:\Documents and Settings\Andy\My Documents\Consulting\root\Qvoice Order Entry
+ServerSideCab=
+File1=C:\Documents and Settings\Andy\My Documents\Consulting\QkOrderSetup\setup.exe
+File2=C:\Documents and Settings\Andy\My Documents\Consulting\QkOrderSetup\Setup.Lst
+File3=C:\Documents and Settings\Andy\My Documents\Consulting\QkOrderSetup\qkorder.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Qvoice Order Entry Install Wizard|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Projects\Consulting\Quality Kitchens\Archival\Setup3.0
+
+[Package|Qvoice Order Entry Install Wizard|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Qvoice Order Entry Install Wizard|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Qvoice Order Entry Install Wizard|Files Found]
+QvoiceUnitOrderer.dll=C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\Qvoice Unit Orderer\QvoiceUnitOrderer.dll
+DataDoctor.exe=C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\DataDoctor.exe
+qkoe.ini=C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkoe.ini
+
+[Package|Qvoice Order Entry Install Wizard|Files Released]
+u2LBAR.DLL=
+u25TOTAL.DLL=
+u25STORE.DLL=
+p2SSYB10.DLL=
+p2SORA7.DLL=
+p2SIFMX.DLL=
+p2BXBSE.DLL=
+p2BBND.DLL=
+p2BBDE.DLL=
+Crystal=
+
+[Package|Qvoice Order Entry Install Wizard|Missing Dependency Information]
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\DataDoctor\DataDoctor.exe=
+C:\Projects\Consulting\Quality Kitchens\root\CRUFLWWS\CRUFLWWS.dll=
+
+[Package|Qvoice Order Entry Install Wizard|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Qvoice Order Entry Install Wizard|Files Added]
+qkoe.ini=
+datadoctor.exe=
+indexinfo.data=
+C:\Projects\Consulting\Quality Kitchens\root\CRUFLWWS\CRUFLWWS.dll=
+
+[Package|Qvoice Order Entry Install Wizard|Files Removed]
+c:\windows\help\windows.hlp=
+c:\documents and settings\andy\my documents\consulting\root\qvoice order entry\qkoe.ini=
+
+[Package|Qvoice Order Entry Install Wizard|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\cpeaut32.dll=Yes
+C:\WINDOWS\system32\crpe32.dll=Yes
+C:\WINDOWS\system32\Implode.dll=Yes
+C:\WINDOWS\system32\Crpaig80.dll=Yes
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\Crystal\Crxlat32.dll=Yes
+C:\WINDOWS\system32\p2bdao.dll=Yes
+C:\WINDOWS\system32\p2ctdao.dll=Yes
+C:\WINDOWS\system32\p2irdao.dll=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\p2sodbc.dll=Yes
+C:\WINDOWS\Crystal\p2ssql.dll=Yes
+C:\WINDOWS\Crystal\p2soledb.dll=Yes
+C:\WINDOWS\Crystal\u2ddisk.dll=Yes
+C:\WINDOWS\Crystal\u2dmapi.dll=Yes
+C:\WINDOWS\Crystal\u2dnotes.dll=Yes
+C:\WINDOWS\Crystal\u2dpost.dll=Yes
+C:\WINDOWS\Crystal\u2dvim.dll=Yes
+C:\WINDOWS\Crystal\u2dapp.dll=Yes
+C:\WINDOWS\Crystal\u2fcr.dll=Yes
+C:\WINDOWS\Crystal\u2fhtml.dll=Yes
+C:\WINDOWS\Crystal\u2fodbc.dll=Yes
+C:\WINDOWS\Crystal\u2frec.dll=Yes
+C:\WINDOWS\Crystal\u2frtf.dll=Yes
+C:\WINDOWS\Crystal\u2fsepv.dll=Yes
+C:\WINDOWS\Crystal\u2ftext.dll=Yes
+C:\WINDOWS\Crystal\u2fwks.dll=Yes
+C:\WINDOWS\Crystal\u2fwordw.dll=Yes
+C:\WINDOWS\Crystal\u2fxls.dll=Yes
+C:\WINDOWS\Crystal\u25dts.dll=Yes
+C:\WINDOWS\Crystal\u2l2000.dll=Yes
+C:\WINDOWS\Crystal\u2lcom.dll=Yes
+C:\WINDOWS\Crystal\u2ldts.dll=Yes
+C:\WINDOWS\Crystal\u2lsamp1.dll=Yes
+C:\WINDOWS\Crystal\u252000.dll=Yes
+\program files\seagate software\shared\SSCSDK80.DLL=Yes
+C:\WINDOWS\system32\MSBIND.DLL=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\MSADODC.OCX=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\Help\windows.hlp=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkorder.exe=Yes
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkoe.ini=Yes
+C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\DataDoctor.exe=Yes
+C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\IndexInfo.data=Yes
+C:\Projects\Consulting\Quality Kitchens\root\CRUFLWWS\CRUFLWWS.dll=Yes
+
+[Package|Qvoice Order Entry Install Wizard|Configure Registry Files]
+Applicable=No
+
+[Package|Qvoice Order Entry Install Wizard|Configure Remote Servers]
+Applicable=No
+
+[Package|Qvoice Order Entry Install Wizard|Install Locations]
+C:\Documents and Settings\Andy\My Documents\Consulting\root\Qvoice Order Entry\qkorder.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\cpeaut32.dll=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\Crxlat32.dll=$(WinSysPath)
+C:\WINDOWS\system32\p2bdao.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\p2ctdao.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\p2irdao.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\system32\p2sodbc.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\p2ssql.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\p2soledb.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2ddisk.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dmapi.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dnotes.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dpost.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dvim.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2dapp.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fcr.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fhtml.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fodbc.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2frec.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2frtf.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fsepv.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2ftext.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fwks.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fwordw.dll=$(WinSysPath)
+C:\WINDOWS\Crystal\u2fxls.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u25dts.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2l2000.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2lcom.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2ldts.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u2lsamp1.dll=$(WinSysPath)\Crystal
+C:\WINDOWS\Crystal\u252000.dll=$(WinSysPath)\Crystal
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\DataDoctor\DataDoctor.exe=$(AppPath)
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\DataDoctor\IndexInfo.data=$(AppPath)
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkorder.exe=$(AppPath)
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Unit Orderer\QvoiceUnitOrderer.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkoe.ini=$(AppPath)
+C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\DataDoctor.exe=$(AppPath)
+C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\IndexInfo.data=$(AppPath)
+C:\Projects\Consulting\Quality Kitchens\root\CRUFLWWS\CRUFLWWS.dll=$(WinSysPath)
+
+[Package|Qvoice Order Entry Install Wizard|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\Andy\My Documents\Consulting\root\Qvoice Order Entry\qkorder.exe=No
+C:\WINDOWS\system32\Implode.dll=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\DataDoctor\DataDoctor.exe=No
+C:\Documents and Settings\Andy\My Documents\Consulting\Quality Kitchens\DataDoctor\IndexInfo.data=No
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkorder.exe=No
+C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry\qkoe.ini=No
+C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\DataDoctor.exe=No
+C:\Projects\Consulting\Quality Kitchens\root\DataDoctor\IndexInfo.data=No
+
+[Package|Qvoice Order Entry Install Wizard|Distribution]
+Type=single
+Size=1.44 MB
+Title=Qvoice Order Entry
+
+[Package|Qvoice Order Entry Install Wizard|IconGroups]
+Group0=Quality Kitchens
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|Qvoice Order Entry Install Wizard|Quality Kitchens]
+Icon1=qkorder.exe
+Title1=Qvoice Order Entry
+StartIn1=$(AppPath)
+Key1=Icon3
+
+[Package|Qvoice Order Entry Install Wizard|Package]
+PackageFolder=C:\Projects\Consulting\Quality Kitchens\Archival\Setup3.0
+ProjectFolder=C:\Projects\Consulting\Quality Kitchens\root\Qvoice Order Entry
+ServerSideCab=
+File1=C:\Projects\Consulting\Quality Kitchens\Archival\Setup3.0\setup.exe
+File2=C:\Projects\Consulting\Quality Kitchens\Archival\Setup3.0\Setup.Lst
+File3=C:\Projects\Consulting\Quality Kitchens\Archival\Setup3.0\qkorder.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

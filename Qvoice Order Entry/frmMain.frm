@@ -30,7 +30,7 @@ Begin VB.Form frmMain
       Index           =   1
       Left            =   0
       TabIndex        =   22
-      Top             =   480
+      Top             =   360
       Width           =   11775
       Begin qkorder.ucOERep OERepControl 
          Height          =   375
@@ -432,6 +432,23 @@ Begin VB.Form frmMain
          _ExtentX        =   4683
          _ExtentY        =   661
       End
+      Begin VB.Label Label18 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Price List"
+         Height          =   255
+         Left            =   5280
+         TabIndex        =   70
+         Top             =   5640
+         Width           =   1215
+      End
+      Begin VB.Label lblPriceList 
+         BorderStyle     =   1  'Fixed Single
+         Height          =   375
+         Left            =   6720
+         TabIndex        =   69
+         Top             =   5520
+         Width           =   3495
+      End
       Begin VB.Label Label12 
          Alignment       =   1  'Right Justify
          Caption         =   "Tracking Code"
@@ -517,9 +534,9 @@ Begin VB.Form frmMain
          Height          =   375
          Left            =   6720
          TabIndex        =   38
-         Top             =   5700
+         Top             =   5880
          Visible         =   0   'False
-         Width           =   2655
+         Width           =   3495
       End
    End
    Begin VB.Frame frmOrder 
@@ -537,16 +554,16 @@ Begin VB.Form frmMain
       Index           =   2
       Left            =   0
       TabIndex        =   47
-      Top             =   480
+      Top             =   360
       Width           =   11700
       Begin VB.Frame FraLines 
          BorderStyle     =   0  'None
          ForeColor       =   &H00C00000&
          Height          =   1335
-         Left            =   120
+         Left            =   0
          TabIndex        =   48
          ToolTipText     =   "Delete Current Line"
-         Top             =   0
+         Top             =   120
          Width           =   11295
          Begin VB.ComboBox CmbLaminate 
             BeginProperty Font 
@@ -762,7 +779,7 @@ Begin VB.Form frmMain
          Left            =   120
          TabIndex        =   61
          TabStop         =   0   'False
-         Top             =   1440
+         Top             =   1560
          Width           =   11415
          _ExtentX        =   20135
          _ExtentY        =   9128
@@ -905,41 +922,6 @@ Begin VB.Form frmMain
          Width           =   975
       End
    End
-   Begin MSComctlLib.TabStrip MainTab 
-      Height          =   375
-      Left            =   0
-      TabIndex        =   23
-      Top             =   0
-      Width           =   12015
-      _ExtentX        =   21193
-      _ExtentY        =   661
-      TabWidthStyle   =   2
-      TabFixedWidth   =   8819
-      TabMinWidth     =   2117
-      _Version        =   393216
-      BeginProperty Tabs {1EFB6598-857C-11D1-B16A-00C0F0283628} 
-         NumTabs         =   2
-         BeginProperty Tab1 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "&Job Information"
-            Object.ToolTipText     =   "View Job Details"
-            ImageVarType    =   2
-         EndProperty
-         BeginProperty Tab2 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
-            Caption         =   "Job &Line Details"
-            Object.ToolTipText     =   "View Line Item Details"
-            ImageVarType    =   2
-         EndProperty
-      EndProperty
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Arial"
-         Size            =   12
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-   End
    Begin MSComctlLib.StatusBar sbStatus 
       Align           =   2  'Align Bottom
       Height          =   300
@@ -973,14 +955,49 @@ Begin VB.Form frmMain
             Style           =   6
             Object.Width           =   1587
             MinWidth        =   1587
-            TextSave        =   "6/30/2004"
+            TextSave        =   "4/9/2013"
          EndProperty
          BeginProperty Panel5 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   5
             Object.Width           =   1587
             MinWidth        =   1587
-            TextSave        =   "10:22 PM"
+            TextSave        =   "9:19 PM"
          EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.TabStrip MainTab 
+      Height          =   375
+      Left            =   0
+      TabIndex        =   23
+      Top             =   0
+      Width           =   11655
+      _ExtentX        =   20558
+      _ExtentY        =   661
+      TabWidthStyle   =   2
+      TabFixedWidth   =   8819
+      TabMinWidth     =   2117
+      _Version        =   393216
+      BeginProperty Tabs {1EFB6598-857C-11D1-B16A-00C0F0283628} 
+         NumTabs         =   2
+         BeginProperty Tab1 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+            Caption         =   "&Job Information"
+            Object.ToolTipText     =   "View Job Details"
+            ImageVarType    =   2
+         EndProperty
+         BeginProperty Tab2 {1EFB659A-857C-11D1-B16A-00C0F0283628} 
+            Caption         =   "Job &Line Details"
+            Object.ToolTipText     =   "View Line Item Details"
+            ImageVarType    =   2
+         EndProperty
+      EndProperty
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
       EndProperty
    End
 End
@@ -1189,7 +1206,9 @@ With mOrder.Customer
     lblCustomerAddress = .AddressInfo.Address1
     lblCustomerAddress2 = .AddressInfo.City & ", " & .AddressInfo.State & "  " & .AddressInfo.Zip
     lblCustomerOther = "Tax: " & _
-        Format$(.Tax, "#0.0%") & "   Discount: " & Format$(.Discount, "#0.0%")
+        Format$(.Tax, "#0.0%") & _
+        "   Discount: " & Format$(.Discount, "#0.0%")
+        
     lblDeliveryArea = .DeliveryDay & " - " & .DeliveryArea
     cmdAlert.Visible = .HasAlert
 End With
@@ -1222,29 +1241,31 @@ If KeyAscii = vbKeyReturn Then
 End If
 End Sub
 Private Sub FillLaminateCombo(pstrSearch As String)
-Dim rs          As Recordset
-Dim lstrString  As String
-Set rs = DataCenter.GetColorMatches(pstrSearch)
-
-With CmbLaminate
-    lstrString = .Text
-    .Clear
-    Do Until rs.EOF
-        .AddItem Format$(rs!vchLaminateCode, "@@@@@@@@!") & rs!vchLaminateDesc
-        .ItemData(.NewIndex) = rs!iLaminateID
-        rs.MoveNext
-    Loop
-    rs.Close
-    Set rs = Nothing
-    If .ListCount > 0 Then
-        .ListIndex = 0
-    Else
-        .Text = lstrString
-    End If
-   ' .SelStart = Len(lstrString) - 1
-   ' AutoMatch CmbLaminate, Asc(Right$(lstrString, 1))
-   ' .SelStart = 0
-End With
+    Dim rs          As Recordset
+    Dim lstrString  As String
+    Screen.MousePointer = MousePointerConstants.vbHourglass
+    Set rs = DataCenter.GetColorMatches(pstrSearch, mOrder.PriceListID)
+    Screen.MousePointer = MousePointerConstants.vbDefault
+    
+    With CmbLaminate
+        lstrString = .Text
+        .Clear
+        Do Until rs.EOF
+            .AddItem Format$(rs!vchLaminateCode, "@@@@@@@@!") & rs!vchLaminateDesc
+            .ItemData(.NewIndex) = rs!iLaminateID
+            rs.MoveNext
+        Loop
+        rs.Close
+        Set rs = Nothing
+        If .ListCount > 0 Then
+            .ListIndex = 0
+        Else
+            .Text = lstrString
+        End If
+       ' .SelStart = Len(lstrString) - 1
+       ' AutoMatch CmbLaminate, Asc(Right$(lstrString, 1))
+       ' .SelStart = 0
+    End With
 End Sub
 
 Private Sub cmbOERep_Change()
@@ -1543,8 +1564,19 @@ gsTextCharge:
         Else
             lstrDesc = InputBox("You have entered the code for a miscellaneous charge" & _
                 vbCrLf & "Please enter the description below", "Charge Processing", "Description")
-            lcurPrice = CCur(InputBox("Please enter the amount the charge for " & lstrDesc, _
-                "Charge Processing", "0.00"))
+            
+            Dim lstrPrice As String
+            lstrPrice = _
+                InputBox( _
+                "Please enter the amount the charge for " & lstrDesc, _
+                "Charge Processing", _
+                "0.00")
+                If IsNumeric(lstrPrice) Then
+                    lcurPrice = CCur(lstrPrice)
+                Else
+                    lcurPrice = 0
+                End If
+                    
             lobjCharge.Init 0, 0, lstrAbbrev, lcurPrice, lstrDesc, False, 0@
         End If
     
@@ -1716,16 +1748,6 @@ Private Sub InitializeMe()
         Next
         '.ListIndex = 0
     End With
-    'Initialize the slab List dropdown
-    Set rs = DataCenter.GetSlabList
-    With cmbSlab
-        Do Until rs.EOF
-            .AddItem Format$(rs!vchSlabCode, "@@@@@@@!") & rs!vchSlabDesc: .ItemData(.NewIndex) = rs("iSlabID")
-            rs.MoveNext
-        Loop
-    End With
-    Set rs = Nothing
-    
     
     lblChargeDescriptor = "Additional Charges  (Seperated by: " & _
                 gstrSeperator & " )"
@@ -1909,6 +1931,24 @@ Private Sub MainTab_KeyPress(KeyAscii As Integer)
     If KeyAscii = vbKeyReturn And MainTab.Tabs(1).Selected Then
         MainTab.Tabs(2).Selected = True
     End If
+End Sub
+
+Private Sub mOrder_CustomerChanged()
+    lblPriceList.Caption = DataCenter.GetPriceListName(mOrder.PriceListID)
+    Dim rs As Recordset
+       'Initialize the slab List dropdown
+     With cmbSlab
+    
+        .Clear
+        Set rs = DataCenter.GetSlabList(mOrder.PriceListID)
+        Do Until rs.EOF
+            .AddItem Format$(rs!vchSlabCode, "@@@@@@@!") & rs!vchSlabDesc: .ItemData(.NewIndex) = rs("iSlabID")
+            rs.MoveNext
+        Loop
+        rs.Close
+    End With
+    Set rs = Nothing
+    
 End Sub
 
 Private Sub mOrder_Message(lstrMessage As String)
@@ -2102,6 +2142,7 @@ With mOrder
             txtBatchID = "On Shipment " & llngBatchid
         End If
     End If
+    lblPriceList = DataCenter.GetPriceListName(.PriceListID)
 End With
 
 mlngCurrentLine = 0

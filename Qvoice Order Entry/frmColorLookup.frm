@@ -2,10 +2,10 @@ VERSION 5.00
 Begin VB.Form frmColorLookup 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Laminate Lookup Wizard"
-   ClientHeight    =   5880
+   ClientHeight    =   7515
    ClientLeft      =   45
    ClientTop       =   330
-   ClientWidth     =   8700
+   ClientWidth     =   9150
    BeginProperty Font 
       Name            =   "MS Sans Serif"
       Size            =   9.75
@@ -19,9 +19,16 @@ Begin VB.Form frmColorLookup
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   5880
-   ScaleWidth      =   8700
+   ScaleHeight     =   7515
+   ScaleWidth      =   9150
    StartUpPosition =   3  'Windows Default
+   Begin VB.ListBox lstUpcharges 
+      Height          =   1260
+      Left            =   4680
+      TabIndex        =   26
+      Top             =   6000
+      Width           =   3975
+   End
    Begin VB.Frame frmColorLookup 
       Caption         =   "Laminate Details"
       Height          =   4095
@@ -60,7 +67,7 @@ Begin VB.Form frmColorLookup
          Height          =   375
          Left            =   1920
          TabIndex        =   18
-         Top             =   2880
+         Top             =   3000
          Width           =   1455
       End
       Begin VB.Label Label9 
@@ -158,15 +165,6 @@ Begin VB.Form frmColorLookup
       End
    End
    Begin VB.ListBox lstResults 
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   3660
       Left            =   240
       Sorted          =   -1  'True
@@ -181,6 +179,14 @@ Begin VB.Form frmColorLookup
       TabIndex        =   0
       Top             =   120
       Width           =   8295
+      Begin VB.ComboBox cmbPriceList 
+         Height          =   360
+         Left            =   4680
+         TabIndex        =   27
+         Text            =   "Combo1"
+         Top             =   1080
+         Width           =   3615
+      End
       Begin VB.OptionButton optSort 
          Caption         =   "&Brand"
          Height          =   255
@@ -259,13 +265,12 @@ Attribute VB_Exposed = False
 
 Option Explicit
 Private Type LaminateType
+    LaminateId As Long
     Code As String
     Description As String
     Brand As String
     UpchargeDesc As String
-    SlabUpcharge As Currency
-    LaminateUpcharge As Currency
-    SESUpcharge As Currency
+    Upcharge As Currency
 End Type
 Private mLamTypes() As LaminateType
 Private mintLamCount As Integer
@@ -277,24 +282,26 @@ End Sub
 Private Sub FillResultsList(pstrSearchText As String)
 Dim rs As Recordset
 Dim X As Integer
-Set rs = DataCenter.GetColorMatches(pstrSearchText, "qklgColorMatchesEx")
 
-mintLamCount = rs.RecordCount
-X = 0
-
-ReDim mLamTypes(0 To mintLamCount)
-Me.lstResults.Clear
-
-With rs
+    Screen.MousePointer = MousePointerConstants.vbHourglass
+    Set rs = DataCenter.GetColorMatches(pstrSearchText, cmbPriceList.ItemData(cmbPriceList.ListIndex))
+    Screen.MousePointer = MousePointerConstants.vbDefault
+ 
+    mintLamCount = rs.RecordCount
+    X = 0
+    
+    ReDim mLamTypes(0 To mintLamCount)
+    Me.lstResults.Clear
+    
+    With rs
     Do Until .EOF
         X = X + 1
+        mLamTypes(X).LaminateId = !iLaminateID
         mLamTypes(X).Code = !vchLaminateCode
         mLamTypes(X).Description = !vchLaminateDesc
-        mLamTypes(X).UpchargeDesc = !vchColorCodeDesc
+        mLamTypes(X).UpchargeDesc = !vchColorCodeDescription
         mLamTypes(X).Brand = !vchBrandDescription
-        mLamTypes(X).SlabUpcharge = !mSlabUpCharge
-        mLamTypes(X).LaminateUpcharge = !mLaminateUpcharge
-        mLamTypes(X).SESUpcharge = !mSquareEdgeUpcharge
+        mLamTypes(X).Upcharge = !flJobUpcharge
         Select Case True
         Case optSort(0)
             lstResults.AddItem mLamTypes(X).Code & " - " & mLamTypes(X).Description
@@ -307,25 +314,38 @@ With rs
         .MoveNext
     Loop
     
-
     
-End With
+    
+    End With
 End Sub
 
 Sub FillLaminateDetails(lintIndex As Integer)
-
-With mLamTypes(lintIndex)
-    Me.lblBrand = .Brand
-    Me.lblColorCode = .Code
-    Me.lblLaminatePrice = FormatCurrency(.LaminateUpcharge)
-    Me.lblName = .Description
-    Me.lblSESPrice = FormatCurrency(.SESUpcharge)
-    Me.lblSlabPrice = FormatCurrency(.SlabUpcharge)
-    Me.lblUpcharge = .UpchargeDesc
-
-End With
+    With mLamTypes(lintIndex)
+        Me.lblBrand = .Brand
+        Me.lblColorCode = .Code
+        Me.lblName = .Description
+        Me.lblUpcharge = .UpchargeDesc
+    End With
+    
+    RefreshUpchargeDetails lintIndex
+    
+    
 End Sub
 
+Private Sub RefreshUpchargeDetails(lintIndex As Integer)
+    lstUpcharges.Clear
+    Dim rs As Recordset
+    Set rs = DataCenter.GetUpChargeDetails(mLamTypes(lintIndex).LaminateId, cmbPriceList.ItemData(cmbPriceList.ListIndex))
+    While Not rs.EOF
+        lstUpcharges.AddItem rs!vchSlabTypeDescription & ";" & FormatCurrency(rs!mSlabUpCharge)
+        rs.MoveNext
+    Wend
+    rs.Close
+    Set rs = Nothing
+    
+
+
+End Sub
 
 Private Sub Form_Load()
 Dim lintSetting
@@ -335,7 +355,19 @@ Dim lintSetting
     If lintSetting < 3 Then
         optSort(lintSetting) = True
     End If
-      
+    
+    Dim rs As Recordset
+    Set rs = DataCenter.GetPriceLists
+    While Not rs.EOF
+        cmbPriceList.AddItem rs!vchPriceListDesc
+        cmbPriceList.ItemData(cmbPriceList.ListCount - 1) = rs!iPriceListID
+        rs.MoveNext
+    Wend
+    
+    rs.Close
+    Set rs = Nothing
+    
+    cmbPriceList.ListIndex = 0
 End Sub
 
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
@@ -355,3 +387,5 @@ End Sub
 Private Sub lstResults_Click()
     FillLaminateDetails CInt(lstResults.ItemData(lstResults.ListIndex))
 End Sub
+
+

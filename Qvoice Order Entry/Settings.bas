@@ -79,7 +79,7 @@ Private Function GetIniSetting(Section As String, Key As String, Default As Stri
     Dim lngNsize As Long
     
     lstrworkstring = Space$(255)
-    lngNsize = 255
+    lngNsize = Len(lstrworkstring)
     
     Call GetPrivateProfileString(Section, Key, Default, lstrworkstring, lngNsize, App.Path & "\qkoe.ini")
     

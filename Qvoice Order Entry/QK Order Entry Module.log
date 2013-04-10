@@ -25,3 +25,4 @@ Access to report file denied. Another program may be using it. : cpeaut32 : 0
 Error in formula  <Record_Selection>. 
 '{vOrderHeader.iOrderID}=16775'
 This field name is not known. : cpeaut32 : 0
+4/9/2013 9:31:23 PM         -2147217887 - Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done. : Microsoft OLE DB Provider for ODBC Drivers : 0

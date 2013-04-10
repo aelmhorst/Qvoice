@@ -29,7 +29,6 @@ Public SelectedJobInfo          As String
 
 'Objects
 Private mRsOEReps               As Recordset
-Private mrsSlabs                As Recordset
 Private mChargecommand         As Command
 
 Private mcolSettings        As Dictionary
@@ -125,15 +124,12 @@ Public Function GetCustomerShipLocations(in_CustomerID As Long) As Recordset
 
 End Function
 
-Public Function GetSlabList() As Recordset
-
-    If mrsSlabs Is Nothing Then
-        Set mrsSlabs = GetData("select iSlabID,vchSlabCode,vchslabDesc from qkgslabinfo")
-    Else
-        mrsSlabs.MoveFirst
-    End If
-    
-    Set GetSlabList = mrsSlabs
+Public Function GetSlabList(iPriceListID As Long) As Recordset
+    Set GetSlabList = GetData( _
+                    "select a.iSlabID, a.vchSlabCode, a.vchslabDesc from " & _
+                    "qkgslabinfo a inner join SlabPrice b " & _
+                    "on a.iSlabId = b.iSlabId " & _
+                    "Where b.iPriceListId=" & iPriceListID)
 End Function
 
 
@@ -147,25 +143,52 @@ Public Function GetCustomer(iCustomerID As Long) As Recordset
 
 End Function
 
-Public Function GetColorMatches(lstrSearchStr As String, Optional pstrProcedureName As String = "qklgColorMatches") As Recordset
-    Dim rs                  As Recordset
+Public Function GetColorMatches(lstrSearchStr As String, iPriceListID As Long) As Recordset
+    Dim rs As Recordset
+    Dim aCmd   As Command
+    Set aCmd = New Command
+    With aCmd
+        Set .ActiveConnection = Cn
+        .CommandText = "qklgColorMatches"
+        .CommandType = adCmdStoredProc
+        .Parameters.Append .CreateParameter("vchSearchString", adVarChar, adParamInput, 30, lstrSearchStr)
+        .Parameters.Append .CreateParameter("iPriceListId", adInteger, adParamInput, , iPriceListID)
+    End With
     
     On Error GoTo errhandler
-    Screen.MousePointer = MousePointerConstants.vbHourglass
-    
-    Set rs = GetDataFromSingularCommand(pstrProcedureName, "vchSearchString", adVarChar, 30, lstrSearchStr)
-    
+    Set rs = GetDataFromCmd(aCmd)
     Set GetColorMatches = rs
     
-    
-    
-    Screen.MousePointer = MousePointerConstants.vbDefault
     Exit Function
 errhandler:
-        Screen.MousePointer = MousePointerConstants.vbDefault
         HandleError Err.Description, False
-        
 End Function
+
+Public Function GetUpChargeDetails(iLaminateID As Long, iPriceListID As Long) As Recordset
+     Dim rs As Recordset
+    Dim aCmd   As Command
+    Set aCmd = New Command
+    With aCmd
+        Set .ActiveConnection = Cn
+        .CommandText = "qklgLaminateUpcharges"
+        .CommandType = adCmdStoredProc
+        .Parameters.Append .CreateParameter("iLaminateID", adInteger, adParamInput, , iLaminateID)
+        .Parameters.Append .CreateParameter("iPriceListId", adInteger, adParamInput, , iPriceListID)
+    End With
+    
+    On Error GoTo errhandler
+    Set rs = GetDataFromCmd(aCmd)
+    Set GetUpChargeDetails = rs
+    
+    Exit Function
+errhandler:
+        HandleError Err.Description, False
+End Function
+
+Public Function GetPriceLists() As Recordset
+    Set GetPriceLists = GetData("Select * from PriceList Order by iPriceListId DESC", adLockReadOnly)
+End Function
+
 
 Public Sub Connect()
     Dim rs As Recordset
@@ -257,7 +280,7 @@ Public Sub SaveLine(iOrderId As Long, pLine As qkorder.Line)
         "flChargesExtPrice", "flLineExtPrice")
     With pLine
         mvardata = Array(iOrderId, .SlabID, .LineDescription, .LineNumber, .SlabLength, .SlabWidth, .LinealFeet, _
-        .SlabPrice, .OrderableLengthInInches, .LaminateID, .Ordered, .Shipped, .Posted, _
+        .SlabPrice, .OrderableLengthInInches, .LaminateId, .Ordered, .Shipped, .Posted, _
        .LaminateUpcharge, .Charges.ExtPrice, .Total)
     End With
     
@@ -373,6 +396,10 @@ Private Sub SaveCharges(pLine As qkorder.Line, pbolFirstSave As Boolean)
         Cn.Execute lstrUpdateString, , adExecuteNoRecords
     End If
 End Sub
+
+Public Function GetPriceListName(iPriceListID As Long) As String
+     GetPriceListName = ExecuteScalar("Select vchPriceListDesc From PriceList where iPriceListId=" & iPriceListID, "")
+End Function
 
 Public Function GetSlab(iSlabid As Long, iPriceListID As Long) As Recordset
     
@@ -540,13 +567,12 @@ Private Sub Class_Terminate()
         mRsOEReps.Close
         Set mRsOEReps = Nothing
     End If
-    If Not mrsSlabs Is Nothing Then
-        mrsSlabs.Close
-        Set mrsSlabs = Nothing
+    If Not mChargecommand Is Nothing Then
+        Set mChargecommand = Nothing
     End If
-    If Not mChargecommand Is Nothing Then Set mChargecommand = Nothing
     
     If Not mCn Is Nothing Then
+        mCn.Close
         Set mCn = Nothing
     End If
     If Not mcolSettings Is Nothing Then Set mcolSettings = Nothing

@@ -26,3 +26,5 @@ Error in formula  <Record_Selection>.
 '{vOrderHeader.iOrderID}=16775'
 This field name is not known. : cpeaut32 : 0
 4/9/2013 9:31:23 PM         -2147217887 - Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done. : Microsoft OLE DB Provider for ODBC Drivers : 0
+1/13/2014 2:50:45 PM        20599 - Cannot open SQL server. : cpeaut32 : 0
+1/13/2014 2:50:51 PM        20599 - Cannot open SQL server. : cpeaut32 : 0

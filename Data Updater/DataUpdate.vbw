@@ -1,4 +1,4 @@
 ModData = 22, 29, 675, 387, 
 ModZap = 66, 87, 567, 493, 
-QueryDefSQLCreator = 132, 174, 778, 528, 
-frmMainDoctor = 88, 116, 575, 474, Z, 44, 58, 697, 416, C
+QueryDefSQLCreator = 132, 174, 778, 528, Z
+frmMainDoctor = 88, 116, 575, 474, , 44, 58, 697, 416, C

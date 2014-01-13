@@ -223,7 +223,7 @@ Public Sub EnableLabelPrint()
     chkPrintLabels.Value = vbChecked
 End Sub
 
-Public Sub SetOrderInfo(in_OrderInfo As String, in_OrderID As Integer)
+Public Sub SetOrderInfo(in_OrderInfo As String, in_OrderID As Long)
     mOrderDescription = in_OrderInfo
     mOrderID = in_OrderID
     

@@ -1,0 +1,4 @@
+VBGROUP 5.0
+StartupProject=Qvoice Order Entry\QK Order Entry Module.vbp
+Project=CRUFLWWS\CRUFLWWS.vbp
+Project=Qvoice Unit Orderer\Qvoice Unit Orderer.vbp
